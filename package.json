@@ -1,0 +1,19 @@
+{
+    "name": "crud-treinamento-backend",
+    "version": "1.0.0",
+    "description": "Código back-end para gerenciar a aplicação X. Frontend e banco de dados mysql desenvolvido por João Pedro.",
+    "main": "src/app.js",
+    "scripts": {
+        "start": "nodemon ./src/server.js"
+    },
+    "author": "JoaoPedro",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "mysql2": "^3.6.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    } 
+}
