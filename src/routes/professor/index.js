@@ -63,7 +63,7 @@ router.post('/cadastrar', function (req, res) {
     try {
 
         conn.execute('INSERT INTO PROFESSOR (NOME_PROFESSOR, NASCIMENTO, FACULDADE) VALUES (?, ?, ?);',
-        [req.body.nome_professor, req.body.nascimento, req.body.faculdade],
+        [req.body.nome, req.body.nascimento, req.body.faculdade],
         function (err, response, fields) {
 
             if (err) throw err;
@@ -88,7 +88,7 @@ router.patch('/alterar/:id', function (req, res) {
     try {
 
         conn.execute('UPDATE PROFESSOR SET NOME_PROFESSOR = ?, NASCIMENTO = ?, FACULDADE = ? WHERE ID = ?;',
-        [req.body.nome_professor, req.body.nascimento, req.body.faculdade, req.params.id],
+        [req.body.nome, req.body.nascimento, req.body.faculdade, req.params.id],
         function (err, response, fields) {
 
             if (err) throw err;
@@ -112,7 +112,7 @@ router.delete('/excluir/:id', function (req, res) {
 
     try {
 
-        conn.execute('DELETE FROM PROFESSOR WHERE id = ?;', [req.params.id], function (err, response, fields) {
+        conn.execute('DELETE FROM PROFESSOR WHERE id = ?;', [req.params.id_professor], function (err, response, fields) {
 
             if (err) throw err;
     
